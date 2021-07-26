@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	
+	
+	<body>
+	
+	<script>
+	document.write(5<2 || 10<4);
+	</script>
+	<p id="Not"></p>
+	<script>
+	document.getElementById("Not").innerHTML= !!(5>10);
+	</script>
+	<script>
+	document.write(Bigger = (1>5) ? "The number on the left is bigger":
+	"The number on the right is bigger");
+	</script>
+	<p>Riders must be at least 52 centimeters tall to ride.</p>
+	<input id="height" value="Enter height" />?
+	<button onclick="ride_function()">Click here</button>?
+	<p id="ride">
+	<script>
+	function ride_function() {
+	var height, Can_ride;
+	height=document.getElementById("height").value;
+	Can_ride=(height<52) ? "You are too short":"You are tall enough";
+	document.getElementById("ride").innerHTML=Can_ride+" to ride.";
+	}
+	</script>
+	<p>How much you got?</p>
+	<input id="height" value="Well?" />
+	<button onclick="ride_func()">What it is?</button>
+	<p id="ride">
+	<script>
+	function ride_func() {
+	var height, can_ride;
+	height=document.getElementById("height").value;
+	can_ride=(height<52) ? "Nah, Dawg...":"A'ight, Bet!";
+	document.getElementById("ride").innerHTML=can_ride+" what it is?";
+	}
+	</script>
+	</body>
+</html>

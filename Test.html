@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+	<head id="myhead">
+		<title>Title</title>
+	</head>
+	
+	<body>
+		
+		<p id="counting"></p>
+		<script>
+			document.getElementById("counting").innerHTML=count();
+			function count() {
+			var starting_point=9;
+			function plus_one() {starting_point +=1;}
+			plus_one();
+			return starting_point;
+			}
+			</script>
+			<script>
+			function add_numbers_1() {
+			var x=10;
+			console.log(15+x);
+			}
+			function add_numbers_2() {
+			console.log(x+100);
+			}
+		add_numbers_1();
+		add_numbers_2();
+		</script>
+		<script>
+			var t=34
+			function subnumb() {
+			var s=25;
+			document.write(t-s+"<br>");
+			}
+			function multnumb() {
+			document.write(t*2+"<br>");
+			}
+			subnumb();
+			multnumb();
+			</script>
+			<script>
+			if (1<2) {
+			document.write("The left number is smaller than the number on the right."+"<br>")
+			}
+		</script>
+		<p id="greeting">How are you this evening?</p>
+		<script>
+			if (new Date().getHours()<18) {
+			document.getElementById("greeting").innerHTML="How are you today?";
+			}
+		</script>
+		<br>
+		<p>Write your age:</p>
+		<input id="age" value="" />
+		<p id="how_old_are_you?"></p>
+		<button onclick="age_function()">Click here</button>
+		<script>
+		function age_function() {
+			age=document.getElementById("age").value;
+			if (age>=18) {
+			vote="You are old enough to vote!";
+			}
+			else {
+			vote="You are not old enough to vote!";
+			}
+			document.getElementById("how_old_are_you?").innerHTML=vote;
+			}
+		</script>
+		<br>
+		<p id="time_of_day"></p>
+		<script>
+			function time_function() {
+			var time= new Date().getHours();
+			var reply;
+			if(time<12==time>0) {
+			reply="Mornin'";
+			}
+			else if(time>12==time<18) {
+			reply="Afternoon";
+			}
+			else {
+			reply="Evenin'";
+			}
+			document.getElementById("time_of_day").innerHTML=reply;
+			}
+			time_function();
+		</script>
+		<br>
+		<p>Guess the number:</p>
+		<input id="guess" value="" />
+		<p id="what_it_is"></p>
+		<button onclick="guesstimate()">Guess!</button>
+		<script>
+			function guesstimate() {
+			guess=document.getElementById("guess").value;
+			if(guess>6) {
+			answer="Too high";
+			}
+			else if(guess<6) {
+			answer="Too low";
+			}
+			else {
+			answer="You got it!";
+			}
+			document.getElementById("what_it_is").innerHTML=answer;
+			}
+		</script>
+		<br>
+		<p id="concatenate"></p>
+		<script>
+			var part_1 = "I have ";
+			var part_2 = "made this ";
+			var part_3 = "into a complete ";
+			var part_4 = "sentence.";
+			var whole=part_1.concat(part_2, part_3, part_4);
+			document.getElementById("concatenate").innerHTML=whole;
+		</script>
+		<p id="slice"></p>
+		<script>
+			var sentence="All work and no play makes Johnny a dull boy.";
+			var section=sentence.slice(27,33);
+			document.getElementById("slice").innerHTML=section;
+		</script>
+		<p>Make it big</p>
+		<button onclick="dingle()">C'mon</button>
+		<p id="ding"></p>
+		<script>
+			function dingle() {
+			var str="dingus!!";
+			var res=str.toUpperCase();
+			document.getElementById("ding").innerHTML=res;
+			}
+		</script>
+		<h2>String Things</h2>
+		<p> The search() method searches a string for a specified value, and retuns the position of the match.</p>
+		<p id="demo">
+		<script>
+			let str="Visit DEEZ NUTS";
+			document.getElementById("demo").innerHTML=str.search("DEEZ NUTS");
+		</script>
+		<p id="precision"></p>
+		<script>
+			var a=12938.3012987376112;
+			document.getElementById("precision").innerHTML=a.toPrecision(10);
+		</script>
+		<p id="fixed"></p>
+		<script>
+			var q=4.2069;
+			document.getElementById("fixed").innerHTML=q.toPrecision(2);
+		</script>
+		<p id="value"></p>
+		<script>
+			let w=123
+			document.getElementById("value").innerHTML=
+			w.valueOf()+"<br>"+
+			(123).valueOf()+"<br>"+
+			(100+23).valueOf();
+		</script>
+		<p>How many seconds would you like to set your alarm for?</p>
+		<input id="seconds" value="" />
+		<button onclick="countdown()">Click here</button>
+		<p id="timer"></p>
+		<script>
+			function countdown() {
+				var seconds=document.getElementById("seconds").value;
+				
+				function tick() {
+					seconds=seconds-1;
+					timer.innerHTML=seconds;
+					setTimeout(tick,1000);
+				if(seconds==-1) {
+					alert("Time's up!");
+				}
+				if(seconds<0){	
+					clearTimeout(seconds);
+					document.getElementById("timer").innerHTML="Expired";
+				}
+					}
+				tick();
+				;
+			}
+		</script>
+		<p>What's in the head?</p>	
+		<button onclick="funky()">Get it!!</button>
+		<p id="demo"></p>
+		<script>
+			function funky(){
+			var e=document.head.id;
+			document.getElementById("demo").innerHTML=e;
+			}
+		</script>
+	</body>
+</html>
