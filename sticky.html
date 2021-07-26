@@ -76,19 +76,7 @@
     </head>
     <body>
         <p id="demo"></p>
-        <script>
-            var obj = JSON.parse('{ "make":"Toyota", "model":"Corolla", "trim":"GT-S"}');
-            document.getElementById("demo").innerHTML = obj.make;
-        </script>
-        <div id='result'></div>
-        <script>
-            if(typeof(Storage) !== 'undefined'){
-                localStorage.setItem('bear','polar');
-                document.getElementById('result').innerHTML=localStorage.getItem('bear');
-            } else{
-                document.getElementById('result').innerHTML="No storage..."
-            }
-        </script>
+
 
 <p>Some example text..</p>
 <h2>Scroll back up again to "remove" the sticky position.</h2>
@@ -119,7 +107,7 @@
             document.getElementById("myForm").style.display="block";
         }
         function closeForm(){
-            document.getElementById("myFrom").style.display="none";
+            document.getElementById("myForm").style.display="none";
         }
     </script>
     </body>
